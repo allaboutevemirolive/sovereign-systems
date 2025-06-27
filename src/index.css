@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @plugin 'tailwindcss-animate';
 
@@ -107,7 +107,6 @@
   color utility to any element that depends on these defaults.
 */
 @layer base {
-
     *,
     ::after,
     ::before,
@@ -195,7 +194,6 @@
 }
 
 @layer base {
-
     button,
     [role="button"] {
         @apply cursor-pointer;

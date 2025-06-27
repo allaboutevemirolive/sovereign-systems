@@ -21,8 +21,8 @@ const Contact = () => {
                         Get in Touch
                     </h2>
                     <p className="mt-4 font-lato text-lg leading-relaxed text-muted-foreground md:text-xl">
-                        We're here to help and answer any questions you might have. We look
-                        forward to hearing from you.
+                        We're here to help and answer any questions you might
+                        have. We look forward to hearing from you.
                     </p>
                 </div>
 
@@ -39,8 +39,8 @@ const Contact = () => {
                                     Email Us
                                 </h3>
                                 <p className="font-lato text-base text-muted-foreground mt-1">
-                                    A great choice for non-urgent matters. We'll get back to you
-                                    within 24 hours.
+                                    A great choice for non-urgent matters. We'll
+                                    get back to you within 24 hours.
                                 </p>
                                 <a
                                     href="mailto:contact@sovereignsystems.com"
@@ -60,7 +60,8 @@ const Contact = () => {
                                     Call Us
                                 </h3>
                                 <p className="font-lato text-base text-muted-foreground mt-1">
-                                    Talk to a team member directly during our business hours.
+                                    Talk to a team member directly during our
+                                    business hours.
                                 </p>
                                 <a
                                     href="tel:5551234567"
@@ -83,7 +84,8 @@ const Contact = () => {
                                     Send a Direct Message
                                 </CardTitle>
                                 <CardDescription className="font-lato text-base pt-1">
-                                    Fill out the form below and we'll be in touch.
+                                    Fill out the form below and we'll be in
+                                    touch.
                                 </CardDescription>
                             </CardHeader>
                             <CardContent className="p-6 pt-0">
@@ -99,7 +101,9 @@ const Contact = () => {
                                             />
                                         </div>
                                         <div className="space-y-1.5">
-                                            <Label htmlFor="company">Company (Optional)</Label>
+                                            <Label htmlFor="company">
+                                                Company (Optional)
+                                            </Label>
                                             <Input
                                                 id="company"
                                                 type="text"

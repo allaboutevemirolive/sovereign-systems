@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import logo from '@/assets/logo.png';
+import { useState } from "react";
+import logo from "@/assets/logo.png";
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -7,7 +7,7 @@ const Header = () => {
     const scrollToSection = (sectionId: string) => {
         const element = document.getElementById(sectionId);
         if (element) {
-            element.scrollIntoView({ behavior: 'smooth' });
+            element.scrollIntoView({ behavior: "smooth" });
         }
         setIsMenuOpen(false);
     };
@@ -17,11 +17,15 @@ const Header = () => {
             <div className="max-w-7xl mx-auto px-6 sm:px-8">
                 <div className="flex items-center justify-between h-16">
                     <button
-                        onClick={() => scrollToSection('home')}
+                        onClick={() => scrollToSection("home")}
                         className="flex items-center gap-3"
                         aria-label="Sovereign Systems Home"
                     >
-                        <img src={logo} alt="Sovereign Systems Logo" className="h-8 w-auto" />
+                        <img
+                            src={logo}
+                            alt="Sovereign Systems Logo"
+                            className="h-8 w-auto"
+                        />
                         <span className="font-inter font-semibold text-xl text-primary hidden sm:block cursor-pointer">
                             Sovereign Systems
                         </span>
@@ -30,25 +34,25 @@ const Header = () => {
                     {/* Desktop Navigation */}
                     <nav className="hidden md:flex space-x-8">
                         <button
-                            onClick={() => scrollToSection('home')}
+                            onClick={() => scrollToSection("home")}
                             className="font-lato text-primary hover:text-muted-foreground transition-colors duration-200 cursor-pointer"
                         >
                             Home
                         </button>
                         <button
-                            onClick={() => scrollToSection('services')}
+                            onClick={() => scrollToSection("services")}
                             className="font-lato text-primary hover:text-muted-foreground transition-colors duration-200 cursor-pointer"
                         >
                             Services
                         </button>
                         <button
-                            onClick={() => scrollToSection('about')}
+                            onClick={() => scrollToSection("about")}
                             className="font-lato text-primary hover:text-muted-foreground transition-colors duration-200 cursor-pointer"
                         >
                             About
                         </button>
                         <button
-                            onClick={() => scrollToSection('contact')}
+                            onClick={() => scrollToSection("contact")}
                             className="font-lato text-primary hover:text-muted-foreground transition-colors duration-200 cursor-pointer"
                         >
                             Contact
@@ -60,9 +64,15 @@ const Header = () => {
                         className="md:hidden w-6 h-6 flex flex-col justify-center items-center"
                         onClick={() => setIsMenuOpen(!isMenuOpen)}
                     >
-                        <span className={`bg-primary block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${isMenuOpen ? 'rotate-45 translate-y-1' : '-translate-y-0.5'}`}></span>
-                        <span className={`bg-primary block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm my-0.5 ${isMenuOpen ? 'opacity-0' : 'opacity-100'}`}></span>
-                        <span className={`bg-primary block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${isMenuOpen ? '-rotate-45 -translate-y-1' : 'translate-y-0.5'}`}></span>
+                        <span
+                            className={`bg-primary block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${isMenuOpen ? "rotate-45 translate-y-1" : "-translate-y-0.5"}`}
+                        ></span>
+                        <span
+                            className={`bg-primary block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm my-0.5 ${isMenuOpen ? "opacity-0" : "opacity-100"}`}
+                        ></span>
+                        <span
+                            className={`bg-primary block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${isMenuOpen ? "-rotate-45 -translate-y-1" : "translate-y-0.5"}`}
+                        ></span>
                     </button>
                 </div>
 
@@ -71,25 +81,25 @@ const Header = () => {
                     <nav className="md:hidden py-4 border-t border-secondary">
                         <div className="flex flex-col space-y-4">
                             <button
-                                onClick={() => scrollToSection('home')}
+                                onClick={() => scrollToSection("home")}
                                 className="font-lato text-primary hover:text-muted-foreground transition-colors duration-200 text-left"
                             >
                                 Home
                             </button>
                             <button
-                                onClick={() => scrollToSection('services')}
+                                onClick={() => scrollToSection("services")}
                                 className="font-lato text-primary hover:text-muted-foreground transition-colors duration-200 text-left"
                             >
                                 Services
                             </button>
                             <button
-                                onClick={() => scrollToSection('about')}
+                                onClick={() => scrollToSection("about")}
                                 className="font-lato text-primary hover:text-muted-foreground transition-colors duration-200 text-left"
                             >
                                 About
                             </button>
                             <button
-                                onClick={() => scrollToSection('contact')}
+                                onClick={() => scrollToSection("contact")}
                                 className="font-lato text-primary hover:text-muted-foreground transition-colors duration-200 text-left"
                             >
                                 Contact

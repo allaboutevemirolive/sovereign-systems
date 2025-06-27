@@ -5,7 +5,9 @@ import { Button } from "./ui/button";
 const Footer = () => {
     // Helper function for smooth scrolling
     const scrollToSection = (sectionId: string) => {
-        document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+        document
+            .getElementById(sectionId)
+            ?.scrollIntoView({ behavior: "smooth" });
     };
 
     const navLinks = [
@@ -24,13 +26,18 @@ const Footer = () => {
                     {/* Branding Column */}
                     <div className="md:col-span-4 lg:col-span-5">
                         <div className="flex items-center gap-3">
-                            <img src={logo} alt="Sovereign Systems Logo" className="h-8 w-auto" />
+                            <img
+                                src={logo}
+                                alt="Sovereign Systems Logo"
+                                className="h-8 w-auto"
+                            />
                             <span className="font-inter font-semibold text-xl text-primary">
                                 Sovereign Systems
                             </span>
                         </div>
                         <p className="mt-4 font-lato text-base text-muted-foreground max-w-xs">
-                            Proactive IT solutions designed to help your business grow and thrive.
+                            Proactive IT solutions designed to help your
+                            business grow and thrive.
                         </p>
                     </div>
 
@@ -43,7 +50,9 @@ const Footer = () => {
                             {navLinks.map((link) => (
                                 <li key={link.name}>
                                     <button
-                                        onClick={() => scrollToSection(link.sectionId)}
+                                        onClick={() =>
+                                            scrollToSection(link.sectionId)
+                                        }
                                         className="font-lato text-base text-muted-foreground transition-colors hover:text-primary"
                                     >
                                         {link.name}
@@ -59,12 +68,18 @@ const Footer = () => {
                         </h3>
                         <ul className="mt-4 space-y-3">
                             <li>
-                                <a href="#" className="font-lato text-base text-muted-foreground transition-colors hover:text-primary">
+                                <a
+                                    href="#"
+                                    className="font-lato text-base text-muted-foreground transition-colors hover:text-primary"
+                                >
                                     Privacy Policy
                                 </a>
                             </li>
                             <li>
-                                <a href="#" className="font-lato text-base text-muted-foreground transition-colors hover:text-primary">
+                                <a
+                                    href="#"
+                                    className="font-lato text-base text-muted-foreground transition-colors hover:text-primary"
+                                >
                                     Terms of Service
                                 </a>
                             </li>
@@ -93,7 +108,8 @@ const Footer = () => {
                 {/* Bottom Bar */}
                 <div className="border-t border-secondary py-8">
                     <p className="text-center font-lato text-sm text-muted-foreground sm:text-left">
-                        © {new Date().getFullYear()} Sovereign Systems. All rights reserved.
+                        © {new Date().getFullYear()} Sovereign Systems. All
+                        rights reserved.
                     </p>
                 </div>
             </div>

@@ -1,36 +1,40 @@
-
 const Services = () => {
     const services = [
         {
             title: "Managed IT Services",
-            description: "Proactive monitoring, maintenance, and support for a flat monthly fee.",
-            image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=600&h=400&q=80"
+            description:
+                "Proactive monitoring, maintenance, and support for a flat monthly fee.",
+            image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=600&h=400&q=80",
         },
         {
             title: "Cybersecurity Solutions",
-            description: "Protecting your business from ransomware, phishing, and data breaches.",
-            image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&h=400&q=80"
+            description:
+                "Protecting your business from ransomware, phishing, and data breaches.",
+            image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&h=400&q=80",
         },
         {
             title: "Cloud Computing & Migration",
-            description: "Securely access your data from anywhere and reduce hardware costs.",
-            image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&w=600&h=400&q=80"
+            description:
+                "Securely access your data from anywhere and reduce hardware costs.",
+            image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&w=600&h=400&q=80",
         },
         {
             title: "IT Strategy & Consulting",
-            description: "A long-term technology plan to help your business scale efficiently.",
-            image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=600&h=400&q=80"
+            description:
+                "A long-term technology plan to help your business scale efficiently.",
+            image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=600&h=400&q=80",
         },
         {
             title: "Data Backup & Disaster Recovery",
-            description: "Ensuring your business can get back online quickly after any incident.",
-            image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=600&h=400&q=80"
+            description:
+                "Ensuring your business can get back online quickly after any incident.",
+            image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=600&h=400&q=80",
         },
         {
             title: "On-Demand IT Support",
             description: "Fast and friendly help when you need it most.",
-            image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&h=400&q=80"
-        }
+            image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&h=400&q=80",
+        },
     ];
 
     return (
@@ -41,7 +45,8 @@ const Services = () => {
                         A Full Suite of IT Solutions
                     </h2>
                     <p className="font-lato text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-                        From foundational support to long-term strategy, we provide the IT services your business needs to thrive.
+                        From foundational support to long-term strategy, we
+                        provide the IT services your business needs to thrive.
                     </p>
                 </div>
 

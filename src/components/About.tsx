@@ -11,26 +11,45 @@ const About = () => {
                     </h2>
                     <div className="space-y-6 max-w-prose font-lato text-lg leading-relaxed text-muted-foreground">
                         <p>
-                            Sovereign Systems was founded with a simple belief: technology should accelerate business growth, not complicate it. After seeing companies struggle with reactive IT and surprise bills, we built a proactive, partnership-based model.
+                            Sovereign Systems was founded with a simple belief:
+                            technology should accelerate business growth, not
+                            complicate it. After seeing companies struggle with
+                            reactive IT and surprise bills, we built a
+                            proactive, partnership-based model.
                         </p>
                         <p>
-                            Our approach is to understand your business first, then build technology solutions that move you forward. We're here to be your trusted technology partner for the long haul.
+                            Our approach is to understand your business first,
+                            then build technology solutions that move you
+                            forward. We're here to be your trusted technology
+                            partner for the long haul.
                         </p>
                     </div>
                     <div className="flex w-full items-center gap-6 pt-4 sm:gap-8">
                         <div className="text-left sm:text-center">
-                            <p className="font-inter text-4xl font-bold text-primary">15+</p>
-                            <p className="font-lato text-sm uppercase tracking-wider text-muted-foreground">Years Experience</p>
+                            <p className="font-inter text-4xl font-bold text-primary">
+                                15+
+                            </p>
+                            <p className="font-lato text-sm uppercase tracking-wider text-muted-foreground">
+                                Years Experience
+                            </p>
                         </div>
                         <Separator orientation="vertical" className="h-10" />
                         <div className="text-left sm:text-center">
-                            <p className="font-inter text-4xl font-bold text-primary">150+</p>
-                            <p className="font-lato text-sm uppercase tracking-wider text-muted-foreground">Businesses Helped</p>
+                            <p className="font-inter text-4xl font-bold text-primary">
+                                150+
+                            </p>
+                            <p className="font-lato text-sm uppercase tracking-wider text-muted-foreground">
+                                Businesses Helped
+                            </p>
                         </div>
                         <Separator orientation="vertical" className="h-10" />
                         <div className="text-left sm:text-center">
-                            <p className="font-inter text-4xl font-bold text-primary">99%</p>
-                            <p className="font-lato text-sm uppercase tracking-wider text-muted-foreground">Client Retention</p>
+                            <p className="font-inter text-4xl font-bold text-primary">
+                                99%
+                            </p>
+                            <p className="font-lato text-sm uppercase tracking-wider text-muted-foreground">
+                                Client Retention
+                            </p>
                         </div>
                     </div>
                 </div>
