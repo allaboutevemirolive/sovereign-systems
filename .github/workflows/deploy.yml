@@ -25,6 +25,8 @@ jobs:
             cd /var/www/www.sovisys.com
             
             echo "➡️  Pulling latest changes from GitHub..."
+            # Note: It's better practice to not use sudo for git pull if possible.
+            # See the "Further Improvements" section below.
             sudo GIT_SSH_COMMAND="ssh -i /root/.ssh/sovisys_deploy_key -o IdentitiesOnly=yes" git pull
 
             echo "➡️  Setting ownership for build process..."
@@ -32,6 +34,11 @@ jobs:
 
             echo "➡️  Installing dependencies..."
             pnpm install
+            
+            echo "➡️  Granting execute permission to esbuild..."
+            # This is the new line that fixes the issue.
+            # We use a wildcard (*) for the esbuild version to make the script more robust.
+            chmod +x ./node_modules/.pnpm/@esbuild+linux-x64*/node_modules/@esbuild/linux-x64/bin/esbuild
             
             echo "➡️  Building the project..."
             pnpm build
