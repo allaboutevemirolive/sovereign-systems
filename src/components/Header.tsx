@@ -13,7 +13,7 @@ const Header = () => {
     };
 
     return (
-        <header className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-sm border-b border-secondary">
+        <header className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-xs border-b border-secondary">
             <div className="max-w-7xl mx-auto px-6 sm:px-8">
                 <div className="flex items-center justify-between h-16">
                     <button
@@ -22,7 +22,7 @@ const Header = () => {
                         aria-label="Sovereign Systems Home"
                     >
                         <img src={logo} alt="Sovereign Systems Logo" className="h-8 w-auto" />
-                        <span className="font-inter font-semibold text-xl text-primary hidden sm:block">
+                        <span className="font-inter font-semibold text-xl text-primary hidden sm:block cursor-pointer">
                             Sovereign Systems
                         </span>
                     </button>
@@ -31,25 +31,25 @@ const Header = () => {
                     <nav className="hidden md:flex space-x-8">
                         <button
                             onClick={() => scrollToSection('home')}
-                            className="font-lato text-primary hover:text-muted-foreground transition-colors duration-200"
+                            className="font-lato text-primary hover:text-muted-foreground transition-colors duration-200 cursor-pointer"
                         >
                             Home
                         </button>
                         <button
                             onClick={() => scrollToSection('services')}
-                            className="font-lato text-primary hover:text-muted-foreground transition-colors duration-200"
+                            className="font-lato text-primary hover:text-muted-foreground transition-colors duration-200 cursor-pointer"
                         >
                             Services
                         </button>
                         <button
                             onClick={() => scrollToSection('about')}
-                            className="font-lato text-primary hover:text-muted-foreground transition-colors duration-200"
+                            className="font-lato text-primary hover:text-muted-foreground transition-colors duration-200 cursor-pointer"
                         >
                             About
                         </button>
                         <button
                             onClick={() => scrollToSection('contact')}
-                            className="font-lato text-primary hover:text-muted-foreground transition-colors duration-200"
+                            className="font-lato text-primary hover:text-muted-foreground transition-colors duration-200 cursor-pointer"
                         >
                             Contact
                         </button>

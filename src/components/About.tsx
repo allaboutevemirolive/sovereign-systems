@@ -36,8 +36,8 @@ const About = () => {
                 </div>
 
                 {/* Image Column */}
-                <div className="relative overflow-hidden rounded-lg border border-secondary/50 shadow-sm">
-                    <div className="aspect-[4/5]">
+                <div className="relative overflow-hidden rounded-lg border border-secondary/50 shadow-xs">
+                    <div className="aspect-4/5">
                         <img
                             src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=800&auto=format&fit=crop"
                             alt="A team collaborating in a modern office"

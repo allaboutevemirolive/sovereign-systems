@@ -51,7 +51,7 @@ const Services = () => {
               key={index}
               className="bg-white group cursor-pointer transition-all duration-300 hover:shadow-xl hover:-translate-y-2 border border-muted/50 overflow-hidden"
             >
-              <div className="aspect-[3/2] overflow-hidden bg-muted/20">
+              <div className="aspect-3/2 overflow-hidden bg-muted/20">
                 <img
                   src={service.image}
                   alt={service.title}

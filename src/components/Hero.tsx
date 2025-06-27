@@ -26,7 +26,7 @@ const Hero = () => {
                     </p>
 
                     {/* Call to Action Buttons */}
-                    <div className="flex flex-col items-center justify-center gap-4 pt-4 sm:flex-row">
+                    <div className="flex flex-col items-center justify-center gap-4 pt-4 sm:flex-row cursor-pointer">
                         <Button
                             size="lg"
                             className="w-full px-8 text-base font-semibold sm:w-auto"
