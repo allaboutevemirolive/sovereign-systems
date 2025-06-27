@@ -9,9 +9,18 @@ const Hero = () => {
     return (
         <section
             id="home"
-            className="w-full bg-background"
+            className="relative w-full overflow-hidden bg-background" // Added relative and overflow-hidden for the background element
         >
-            <div className="container mx-auto flex min-h-screen flex-col items-center justify-center px-4 pt-20 pb-10 text-center">
+            {/* Subtle, abstract background graphic */}
+            <div
+                aria-hidden="true"
+                className="absolute inset-0 z-0"
+            >
+                <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgba(234,234,234,0.4),transparent)]" />
+            </div>
+
+            {/* Content container with z-index to ensure it's on top */}
+            <div className="container relative z-10 mx-auto flex min-h-screen flex-col items-center justify-center px-4 pt-20 pb-10 text-center">
                 <div className="max-w-4xl animate-fade-in space-y-6">
                     {/* Kicker */}
                     <p className="font-inter text-base font-semibold tracking-wider text-primary uppercase">
