@@ -25,10 +25,10 @@ jobs:
             cd /var/www/www.sovisys.com
             
             echo "➡️  Pulling latest changes from GitHub..."
-            GIT_SSH_COMMAND="ssh -i /root/.ssh/sovisys_deploy_key -o IdentitiesOnly=yes" git pull
+            sudo GIT_SSH_COMMAND="ssh -i /root/.ssh/sovisys_deploy_key -o IdentitiesOnly=yes" git pull
 
             echo "➡️  Installing dependencies and building..."
-            pnpm install
-            pnpm build
+            npm install
+            npm build
             
             echo "✅ www.sovisys.com deployment successful!"
