@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import logo from '@/assets/logo.png'; // 1. Import the logo image
+import logo from '@/assets/logo.png';
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -16,7 +16,6 @@ const Header = () => {
         <header className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-sm border-b border-secondary">
             <div className="max-w-7xl mx-auto px-6 sm:px-8">
                 <div className="flex items-center justify-between h-16">
-                    {/* 2. Replace the original text-only div with this button */}
                     <button
                         onClick={() => scrollToSection('home')}
                         className="flex items-center gap-3"
