@@ -27,16 +27,20 @@ jobs:
             echo "➡️  Pulling latest changes from GitHub..."
             sudo GIT_SSH_COMMAND="ssh -i /root/.ssh/sovisys_deploy_key -o IdentitiesOnly=yes" git pull
 
+            echo "➡️  Installing dependencies..."
+            pnpm install
+
+            echo "➡️  Setting final permissions..."
             sudo chown -R ubuntu:www-data .
             sudo find . -type d -exec chmod 775 {} \;
             sudo find . -type f -exec chmod 664 {} \;
-
-            if [ -d "node_modules" ]; then
-              sudo find node_modules -type f -name "*" -exec chmod u+x {} \;
+            # This is the crucial part: find all binaries in node_modules/.bin and make them executable
+            if [ -d "node_modules/.bin" ]; then
+              sudo find node_modules/.bin -type f -exec chmod +x {} \;
             fi
-
-            echo "➡️  Installing dependencies and building..."
-            pnpm install
+            # --------------------------
+            
+            echo "➡️  Building the project..."
             pnpm build
             
             echo "✅ www.sovisys.com deployment successful!"
