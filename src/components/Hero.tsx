@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ChevronRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 const Hero = () => {
     const scrollTo = (id: string) => {
@@ -11,22 +11,27 @@ const Hero = () => {
             id="home"
             className="w-full bg-background"
         >
-            <div className="container mx-auto flex min-h-screen flex-col items-center justify-center px-4 py-20 text-center">
-                <div className="max-w-4xl animate-fade-in space-y-8">
+            <div className="container mx-auto flex min-h-screen flex-col items-center justify-center px-4 pt-20 pb-10 text-center">
+                <div className="max-w-4xl animate-fade-in space-y-6">
+                    {/* Kicker */}
+                    <p className="font-inter text-base font-semibold tracking-wider text-primary uppercase">
+                        Technology That Drives Growth
+                    </p>
+
                     {/* Main Headline */}
-                    <h1 className="font-inter text-5xl font-extrabold leading-tight tracking-tighter text-primary sm:text-6xl lg:text-7xl text-balance">
-                        Stop worrying about IT.
+                    <h1 className="font-inter text-5xl font-bold leading-tight tracking-tighter text-primary sm:text-6xl lg:text-7xl text-balance">
+                        Focus on your business.
                         <br />
-                        Start growing your business.
+                        We’ll handle the technology.
                     </h1>
 
                     {/* Sub-headline/Paragraph */}
-                    <p className="mx-auto max-w-2xl font-lato text-lg leading-relaxed text-muted-foreground md:text-xl">
-                        We handle your technology—from strategy and cybersecurity to 24/7 support—so you can focus on what you do best.
+                    <p className="mx-auto max-w-3xl font-lato text-lg leading-relaxed text-muted-foreground md:text-xl">
+                        Proactive IT strategy, security, and support, designed to be your competitive advantage. Stop fighting with technology and start scaling.
                     </p>
 
                     {/* Call to Action Buttons */}
-                    <div className="flex flex-col items-center justify-center gap-4 pt-4 sm:flex-row cursor-pointer">
+                    <div className="flex flex-col items-center justify-center gap-4 pt-6 sm:flex-row">
                         <Button
                             size="lg"
                             className="w-full px-8 text-base font-semibold sm:w-auto"
@@ -41,7 +46,7 @@ const Hero = () => {
                             onClick={() => scrollTo('services')}
                         >
                             Explore Our Services
-                            <ChevronRight className="ml-1 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                            <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                         </Button>
                     </div>
                 </div>
