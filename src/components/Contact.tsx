@@ -46,7 +46,7 @@ const Contact = () => {
                                     href="mailto:contact@sovereignsystems.com"
                                     className="font-lato text-base text-primary underline-offset-4 hover:underline block mt-2"
                                 >
-                                    contact@sovereignsystems.com
+                                    support@sovisys.com
                                 </a>
                             </div>
                         </div>
