@@ -1,10 +1,14 @@
 import { useState } from "react";
 import logo from "@/assets/logo.png";
 import { Button } from "./ui/button";
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+import {
+    Popover,
+    PopoverContent,
+    PopoverTrigger,
+} from "@/components/ui/popover";
 import { Separator } from "./ui/separator";
 import { ContactDetails } from "./ContactDetails";
-import { useLocation, useNavigate, Link } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -29,7 +33,12 @@ const Header = () => {
         <header className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-sm border-b border-secondary">
             <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-16">
-                    <Link to="/" onClick={() => setIsMenuOpen(false)} className="flex items-center gap-3" aria-label="Sovereign Systems Home">
+                    {/* UPDATED: Changed from <Link> to <button> and using handleNavClick */}
+                    <button
+                        onClick={() => handleNavClick("home")}
+                        className="flex items-center gap-3"
+                        aria-label="Sovereign Systems Home"
+                    >
                         <img
                             src={logo}
                             alt="Sovereign Systems Logo"
@@ -38,7 +47,7 @@ const Header = () => {
                         <span className="font-inter font-semibold text-xl text-primary hidden sm:block">
                             Sovereign Systems
                         </span>
-                    </Link>
+                    </button>
 
                     {/* Desktop Navigation */}
                     <div className="hidden md:flex items-center gap-6">
