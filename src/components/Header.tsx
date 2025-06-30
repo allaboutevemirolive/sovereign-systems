@@ -1,5 +1,13 @@
 import { useState } from "react";
 import logo from "@/assets/logo.png";
+import { Button } from "./ui/button";
+import {
+    Popover,
+    PopoverContent,
+    PopoverTrigger,
+} from "@/components/ui/popover";
+import { Separator } from "./ui/separator";
+import { ContactDetails } from "./ContactDetails"; 
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,8 +21,8 @@ const Header = () => {
     };
 
     return (
-        <header className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-xs border-b border-secondary">
-            <div className="max-w-7xl mx-auto px-6 sm:px-8">
+        <header className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-sm border-b border-secondary">
+            <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-16">
                     <button
                         onClick={() => scrollToSection("home")}
@@ -32,47 +40,73 @@ const Header = () => {
                     </button>
 
                     {/* Desktop Navigation */}
-                    <nav className="hidden md:flex space-x-8">
-                        <button
-                            onClick={() => scrollToSection("home")}
-                            className="font-lato text-primary hover:text-muted-foreground transition-colors duration-200 cursor-pointer"
-                        >
-                            Home
-                        </button>
-                        <button
-                            onClick={() => scrollToSection("services")}
-                            className="font-lato text-primary hover:text-muted-foreground transition-colors duration-200 cursor-pointer"
-                        >
-                            Services
-                        </button>
-                        <button
-                            onClick={() => scrollToSection("about")}
-                            className="font-lato text-primary hover:text-muted-foreground transition-colors duration-200 cursor-pointer"
-                        >
-                            About
-                        </button>
-                        <button
-                            onClick={() => scrollToSection("contact")}
-                            className="font-lato text-primary hover:text-muted-foreground transition-colors duration-200 cursor-pointer"
-                        >
-                            Contact
-                        </button>
-                    </nav>
+                    <div className="hidden md:flex items-center gap-6">
+                        <nav className="flex space-x-6">
+                            <button
+                                onClick={() => scrollToSection("services")}
+                                className="font-lato text-base text-primary transition-colors hover:text-muted-foreground"
+                            >
+                                Services
+                            </button>
+                            <button
+                                onClick={() => scrollToSection("about")}
+                                className="font-lato text-base text-primary transition-colors hover:text-muted-foreground"
+                            >
+                                About
+                            </button>
+                            <button
+                                onClick={() => scrollToSection("faq")}
+                                className="font-lato text-base text-primary transition-colors hover:text-muted-foreground"
+                            >
+                                FAQ
+                            </button>
+                            <button
+                                onClick={() => scrollToSection("contact")}
+                                className="font-lato text-base text-primary transition-colors hover:text-muted-foreground"
+                            >
+                                Get a Quote
+                            </button>
+                        </nav>
+
+                        <Popover>
+                            <PopoverTrigger asChild>
+                                <Button className="font-lato font-semibold">
+                                    Contact Us
+                                </Button>
+                            </PopoverTrigger>
+                            <PopoverContent className="w-80 border-secondary bg-background mr-4 p-6 shadow-xl rounded-lg">
+                                <ContactDetails />
+                            </PopoverContent>
+                        </Popover>
+                    </div>
 
                     {/* Mobile Menu Button */}
                     <button
-                        className="md:hidden w-6 h-6 flex flex-col justify-center items-center"
+                        className="md:hidden"
                         onClick={() => setIsMenuOpen(!isMenuOpen)}
+                        aria-label="Toggle menu"
                     >
-                        <span
-                            className={`bg-primary block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${isMenuOpen ? "rotate-45 translate-y-1" : "-translate-y-0.5"}`}
-                        ></span>
-                        <span
-                            className={`bg-primary block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm my-0.5 ${isMenuOpen ? "opacity-0" : "opacity-100"}`}
-                        ></span>
-                        <span
-                            className={`bg-primary block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${isMenuOpen ? "-rotate-45 -translate-y-1" : "translate-y-0.5"}`}
-                        ></span>
+                        <div className="w-6 h-6 flex flex-col justify-center items-center">
+                            <span
+                                className={`bg-primary block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${
+                                    isMenuOpen
+                                        ? "rotate-45 translate-y-1"
+                                        : "-translate-y-0.5"
+                                }`}
+                            ></span>
+                            <span
+                                className={`bg-primary block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm my-0.5 ${
+                                    isMenuOpen ? "opacity-0" : "opacity-100"
+                                }`}
+                            ></span>
+                            <span
+                                className={`bg-primary block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${
+                                    isMenuOpen
+                                        ? "-rotate-45 -translate-y-1"
+                                        : "translate-y-0.5"
+                                }`}
+                            ></span>
+                        </div>
                     </button>
                 </div>
 
@@ -82,28 +116,38 @@ const Header = () => {
                         <div className="flex flex-col space-y-4">
                             <button
                                 onClick={() => scrollToSection("home")}
-                                className="font-lato text-primary hover:text-muted-foreground transition-colors duration-200 text-left"
+                                className="font-lato text-lg text-primary hover:text-muted-foreground transition-colors duration-200 text-left"
                             >
                                 Home
                             </button>
                             <button
                                 onClick={() => scrollToSection("services")}
-                                className="font-lato text-primary hover:text-muted-foreground transition-colors duration-200 text-left"
+                                className="font-lato text-lg text-primary hover:text-muted-foreground transition-colors duration-200 text-left"
                             >
                                 Services
                             </button>
                             <button
                                 onClick={() => scrollToSection("about")}
-                                className="font-lato text-primary hover:text-muted-foreground transition-colors duration-200 text-left"
+                                className="font-lato text-lg text-primary hover:text-muted-foreground transition-colors duration-200 text-left"
                             >
                                 About
                             </button>
                             <button
-                                onClick={() => scrollToSection("contact")}
-                                className="font-lato text-primary hover:text-muted-foreground transition-colors duration-200 text-left"
+                                onClick={() => scrollToSection("faq")}
+                                className="font-lato text-lg text-primary hover:text-muted-foreground transition-colors duration-200 text-left"
                             >
-                                Contact
+                                FAQ
                             </button>
+                            <button
+                                onClick={() => scrollToSection("contact")}
+                                className="font-lato text-lg text-primary hover:text-muted-foreground transition-colors duration-200 text-left"
+                            >
+                                Get a Quote
+                            </button>
+                            <Separator className="!my-6 bg-secondary" />
+                            <div className="pt-2">
+                                <ContactDetails />
+                            </div>
                         </div>
                     </nav>
                 )}
