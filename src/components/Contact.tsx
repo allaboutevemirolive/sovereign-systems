@@ -13,7 +13,7 @@ import { Mail, Phone } from "lucide-react";
 
 const Contact = () => {
     return (
-        <section id="contact" className="w-full py-20 lg:py-32 bg-muted">
+        <section id="contact" className="w-full py-20 lg:py-32">
             <div className="container mx-auto max-w-7xl px-4">
                 {/* Section Header */}
                 <div className="mx-auto max-w-3xl text-center mb-16">

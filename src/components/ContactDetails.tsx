@@ -1,40 +1,56 @@
-import { Mail, Phone, Clock } from "lucide-react";
+import { Separator } from "@/components/ui/separator";
 
-export const ContactDetails = () => (
-    <div className="space-y-4">
-        <h3 className="font-inter font-semibold text-primary mb-4 text-lg md:hidden">
-            Contact Information
-        </h3>
-        <a
-            href="tel:+601116456391"
-            className="flex items-center gap-4 group"
-        >
-            <Phone className="h-5 w-5 text-muted-foreground flex-shrink-0" />
-            <p className="font-lato font-medium text-primary group-hover:underline">
-                +6011-1645-6391
+export const ContactDetails = () => {
+    return (
+        <div>
+            {/* Header for the popover/section */}
+            <h3 className="font-inter text-lg font-semibold text-primary">
+                Contact Information
+            </h3>
+            <p className="mt-1 font-lato text-base text-muted-foreground">
+                We're available during our business hours.
             </p>
-        </a>
-        <a
-            href="mailto:support@sovisys.com"
-            className="flex items-center gap-4 group"
-        >
-            <Mail className="h-5 w-5 text-muted-foreground flex-shrink-0" />
-            <p className="font-lato font-medium text-primary group-hover:underline">
-                support@sovisys.com
-            </p>
-        </a>
-        <div className="flex items-start gap-4">
-            <Clock className="h-5 w-5 mt-1 text-muted-foreground flex-shrink-0" />
-            <div>
-                <p className="font-lato font-medium text-primary">
-                    Mon–Fri, 8AM – 6PM MYT
-                </p>
-                <p className="text-sm text-muted-foreground">
-                    (Kuala Lumpur Time)
-                </p>
+
+            {/* A clean separator */}
+            <Separator className="my-4 bg-secondary" />
+
+            {/* Structured contact information */}
+            <div className="space-y-4 font-lato">
+                <div>
+                    <p className="text-sm font-medium text-muted-foreground">
+                        Phone
+                    </p>
+                    <a
+                        href="tel:+601116456391"
+                        className="text-base text-primary transition-colors hover:text-muted-foreground"
+                    >
+                        +6011-1645-6391
+                    </a>
+                </div>
+
+                <div>
+                    <p className="text-sm font-medium text-muted-foreground">
+                        Email
+                    </p>
+                    <a
+                        href="mailto:support@sovisys.com"
+                        className="text-base text-primary transition-colors hover:text-muted-foreground"
+                    >
+                        support@sovisys.com
+                    </a>
+                </div>
+
+                <div>
+                    <p className="text-sm font-medium text-muted-foreground">
+                        Business Hours
+                    </p>
+                    <p className="text-base text-primary">
+                        Mon–Fri, 8AM – 6PM MYT
+                    </p>
+                </div>
             </div>
         </div>
-    </div>
-);
+    );
+};
 
 export default ContactDetails;
